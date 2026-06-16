@@ -1,0 +1,66 @@
+/* SHAWRKS BRUTALIST & MOTION STYLES */
+
+:root {
+  --border-width-thick: 3px;
+  --border-radius-zero: 0px;
+  --transition-speed-fast: 0.15s ease-out;
+  --transition-speed-slow: 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Brutalist borders and layout */
+.shopify-section {
+  border-bottom: var(--border-width-thick) solid var(--color-border);
+}
+
+img {
+  border-radius: var(--border-radius-zero) !important;
+}
+
+button, .button, .btn {
+  border-radius: var(--border-radius-zero) !important;
+  border-width: var(--border-width-thick) !important;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  transition: all var(--transition-speed-fast);
+}
+
+button:hover, .button:hover, .btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 4px 4px 0px 0px var(--color-foreground);
+}
+
+/* High Contrast Adjustments */
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-weight: 900 !important;
+  line-height: 0.9 !important;
+}
+
+/* Subtle motion utility classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp var(--transition-speed-slow) forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure body background is dark */
+body {
+  background-color: #0a0a0a !important;
+  color: #f4f4f4 !important;
+}
+
+/* Remove default padding for a more full-bleed look on hero */
+.section-hero {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none;
+}
