@@ -5,6 +5,7 @@
   overflow: hidden;
   padding: 4rem 0;
   width: 100%;
+  background-color: #ffffff;
 }
 
 coverflow-carousel {
@@ -37,7 +38,7 @@ coverflow-carousel {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-  background-color: #fff;
+  background-color: #111;
   will-change: transform, opacity;
 }
 
@@ -54,8 +55,8 @@ coverflow-carousel {
   left: 0;
   width: 100%;
   padding: 30px 20px 20px;
-  background: linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 100%);
-  color: #000;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  color: #ffffff;
   text-align: center;
   opacity: 0;
   transition: opacity 0.4s;
@@ -72,7 +73,7 @@ coverflow-carousel {
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #000;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
