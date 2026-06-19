@@ -119,10 +119,10 @@
     "coverflow_collections_4caCM6": {
       "type": "coverflow-collections",
       "blocks": {
-        "collection_qJtPcj": {
+        "collection_AcRVtm": {
           "type": "collection",
           "settings": {
-            "collection": "t-shirts"
+            "collection": "denims"
           }
         },
         "collection_8hxdyA": {
@@ -131,10 +131,10 @@
             "collection": "shirts"
           }
         },
-        "collection_AcRVtm": {
+        "collection_qJtPcj": {
           "type": "collection",
           "settings": {
-            "collection": "denims"
+            "collection": "t-shirts"
           }
         },
         "collection_h9qNz7": {
@@ -151,9 +151,9 @@
         }
       },
       "block_order": [
-        "collection_qJtPcj",
-        "collection_8hxdyA",
         "collection_AcRVtm",
+        "collection_8hxdyA",
+        "collection_qJtPcj",
         "collection_h9qNz7",
         "collection_ENyLfp"
       ],
