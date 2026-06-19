@@ -10,6 +10,11 @@
     {% if section.settings.color_text != blank %}
       color: {{ section.settings.color_text }};
     {% endif %}
+    {% if section.settings.rotation != 0 %}
+      transform: rotate({{ section.settings.rotation }}deg);
+      width: 150vw;
+      margin-left: -25vw;
+    {% endif %}
   }
 
   .scrolling-wrapper {
@@ -186,9 +191,20 @@
       "info": "Header  Colors"
     },
     {
+      "type": "range",
+      "id": "rotation",
+      "min": -90,
+      "max": 90,
+      "step": 1,
+      "label": "Rotation",
+      "unit": "deg",
+      "default": 0
+    },
+    {
       "type": "color",
       "id": "color_text",
-      "label": "Color Text"
+      "label": "Text Color",
+      "default": "#000000"
     },
     {
       "type": "color",
