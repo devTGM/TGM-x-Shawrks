@@ -166,86 +166,6 @@
         "padding_bottom": 36
       }
     },
-    "1780745553a18c03f6": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_a5d481f_QxNn3H": {
-          "type": "ai_gen_block_a5d481f",
-          "settings": {
-            "transparent_header": true,
-            "header_height": 150,
-            "mobile_header_height": 80,
-            "desktop_height": 700,
-            "mobile_height": 400,
-            "autoplay": true,
-            "autoplay_speed": 5,
-            "transition_speed": 0.5,
-            "show_arrows": false,
-            "arrow_size": 50,
-            "arrow_background": "#ffffff",
-            "arrow_hover_background": "#f5f5f5",
-            "arrow_color": "#000000",
-            "show_dots": true,
-            "dot_size": 8,
-            "dot_color": "#ffffff",
-            "slide_1_enabled": true,
-            "slide_1_desktop_image": "shopify://shop_images/Banner_1.webp",
-            "slide_1_link_type": "none",
-            "slide_1_collection": "",
-            "slide_1_product": "",
-            "slide_2_enabled": true,
-            "slide_2_desktop_image": "shopify://shop_images/banner_2.webp",
-            "slide_2_link_type": "none",
-            "slide_2_collection": "",
-            "slide_2_product": "",
-            "slide_3_enabled": false,
-            "slide_3_link_type": "none",
-            "slide_3_collection": "",
-            "slide_3_product": "",
-            "slide_4_enabled": false,
-            "slide_4_link_type": "collection",
-            "slide_4_collection": "",
-            "slide_4_product": "",
-            "slide_5_enabled": false,
-            "slide_5_link_type": "none",
-            "slide_5_collection": "",
-            "slide_5_product": ""
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_a5d481f_QxNn3H"
-      ],
-      "disabled": true,
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "full-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-5",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
     "product_list_X8Q7bi": {
       "type": "product-list",
       "blocks": {
@@ -534,7 +454,7 @@
       },
       "name": "Featured collection",
       "settings": {
-        "collection": "all",
+        "collection": "t-shirts",
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "max_products": 3,
@@ -715,7 +635,6 @@
   "order": [
     "hero_KwqKPd",
     "coverflow_collections_4caCM6",
-    "1780745553a18c03f6",
     "product_list_X8Q7bi",
     "section_RhpYRt"
   ]
