@@ -172,13 +172,13 @@
         "text_JEDVJD": {
           "type": "text",
           "settings": {
-            "text": "<p>Flat 10% Off on Prepaid Orders</p>",
-            "width": "fit-content",
+            "text": "<ul><li>Flat 10% Off on Prepaid Orders</li></ul>",
+            "width": "100%",
             "max_width": "normal",
             "alignment": "left",
             "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
+            "font": "var(--font-heading--family)",
+            "font_size": "1.5rem",
             "line_height": "tight",
             "letter_spacing": "tight",
             "case": "none",
@@ -197,13 +197,13 @@
         "text_pEDWkt": {
           "type": "text",
           "settings": {
-            "text": "<p>FREE Shipping on Prepaid Orders</p>",
+            "text": "<ul><li>FREE Shipping on Prepaid Orders</li></ul>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
             "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
+            "font": "var(--font-heading--family)",
+            "font_size": "1.5rem",
             "line_height": "tight",
             "letter_spacing": "tight",
             "case": "none",
@@ -230,7 +230,7 @@
         "color_scheme": "scheme-a4b846b6-b754-4a81-b9ba-392b18ecac5f",
         "padding-block-start": 10,
         "padding-block-end": 10,
-        "gap_between_elements": 24
+        "gap_between_elements": 31
       }
     },
     "product_list_X8Q7bi": {
