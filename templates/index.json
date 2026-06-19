@@ -139,9 +139,8 @@
         },
         "collection_h9qNz7": {
           "type": "collection",
-          "disabled": true,
           "settings": {
-            "collection": ""
+            "collection": "tanks"
           }
         },
         "collection_ENyLfp": {
