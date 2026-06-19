@@ -701,12 +701,32 @@
         "rotation": -45,
         "enable_twin": true
       }
+    },
+    "scrolling_text_9tpgul": {
+      "type": "scrolling-text",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "New Scrolling Text Section",
+            "text_size": 100
+          }
+        }
+      },
+      "block_order": [
+        "text_1"
+      ],
+      "settings": {
+        "enable_twin": true,
+        "speed": 20
+      }
     }
   },
   "order": [
     "hero_KwqKPd",
     "coverflow_collections_4caCM6",
     "marquee_x8242x",
+    "scrolling_text_9tpgul",
     "product_list_X8Q7bi",
     "section_RhpYRt"
   ]
