@@ -166,6 +166,47 @@
         "padding_bottom": 36
       }
     },
+    "marquee_DVkXpJ": {
+      "type": "marquee",
+      "blocks": {
+        "text_JEDVJD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We make things that work better and last longer.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "tight",
+            "letter_spacing": "tight",
+            "case": "none",
+            "wrap": "nowrap",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_JEDVJD"
+      ],
+      "name": "t:names.marquee_section",
+      "settings": {
+        "movement_direction": "normal",
+        "color_scheme": "scheme-6",
+        "padding-block-start": 10,
+        "padding-block-end": 10,
+        "gap_between_elements": 24
+      }
+    },
     "product_list_X8Q7bi": {
       "type": "product-list",
       "blocks": {
@@ -630,136 +671,12 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
-    },
-    "marquee_x8242x": {
-      "type": "marquee",
-      "blocks": {
-        "text_1": {
-          "type": "text",
-          "settings": {
-            "text": "A garment is not merely a covering, but a story of emotions.",
-            "type_preset": "h4",
-            "font": "var(--font-primary--family)",
-            "color": "#632726",
-            "width": "fit-content",
-            "wrap": "nowrap",
-            "margin": 0,
-            "padding": 0
-          }
-        },
-        "text_2": {
-          "type": "text",
-          "settings": {
-            "text": "○",
-            "type_preset": "h4",
-            "font": "var(--font-primary--family)",
-            "color": "#632726",
-            "width": "fit-content",
-            "wrap": "nowrap",
-            "margin": 0,
-            "padding": 0
-          }
-        },
-        "text_3": {
-          "type": "text",
-          "settings": {
-            "text": "वस्त्रं न केवलम् आच्छादनम्, अपितु भावकथा।",
-            "type_preset": "h4",
-            "font": "var(--font-primary--family)",
-            "color": "#632726",
-            "width": "fit-content",
-            "wrap": "nowrap",
-            "margin": 0,
-            "padding": 0
-          }
-        },
-        "text_4": {
-          "type": "text",
-          "settings": {
-            "text": "○",
-            "type_preset": "h4",
-            "font": "var(--font-primary--family)",
-            "color": "#632726",
-            "width": "fit-content",
-            "wrap": "nowrap",
-            "margin": 0,
-            "padding": 0
-          }
-        }
-      },
-      "block_order": [
-        "text_1",
-        "text_2",
-        "text_3",
-        "text_4"
-      ],
-      "settings": {
-        "color_scheme": "scheme-4",
-        "padding-block-start": 12,
-        "padding-block-end": 12,
-        "gap_between_elements": 40,
-        "rotation": -45,
-        "enable_twin": true
-      }
-    },
-    "scrolling_text_9tpgul": {
-      "type": "scrolling-text",
-      "blocks": {
-        "text_en": {
-          "type": "text",
-          "settings": {
-            "text": "A garment is not merely a covering, but a story of emotions.",
-            "text_size": 24,
-            "text_font": "heading"
-          }
-        },
-        "circle_1": {
-          "type": "text",
-          "settings": {
-            "text": "○",
-            "text_size": 24,
-            "text_font": "body"
-          }
-        },
-        "text_hi": {
-          "type": "text",
-          "settings": {
-            "text": "\"वस्त्रं न केवलम् आच्छादनम्, अपितु भावकथा।\"",
-            "text_size": 24,
-            "text_font": "heading"
-          }
-        },
-        "circle_2": {
-          "type": "text",
-          "settings": {
-            "text": "○",
-            "text_size": 24,
-            "text_font": "body"
-          }
-        }
-      },
-      "block_order": [
-        "text_en",
-        "circle_1",
-        "text_hi",
-        "circle_2"
-      ],
-      "settings": {
-        "enable_twin": true,
-        "speed": 20,
-        "color_text": "#632726",
-        "color_background": "#ffffff",
-        "grid_horizontal": 40,
-        "padding_top": 24,
-        "padding_bottom": 24,
-        "rotation": -5
-      }
     }
   },
   "order": [
     "hero_KwqKPd",
     "coverflow_collections_4caCM6",
-    "scrolling_text_9tpgul",
+    "marquee_DVkXpJ",
     "product_list_X8Q7bi",
     "section_RhpYRt"
   ]
