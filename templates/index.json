@@ -116,6 +116,56 @@
         "padding-block-end": 40
       }
     },
+    "coverflow_collections_4caCM6": {
+      "type": "coverflow-collections",
+      "blocks": {
+        "collection_qJtPcj": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection_8hxdyA": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection_AcRVtm": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection_h9qNz7": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection_ENyLfp": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_qJtPcj",
+        "collection_8hxdyA",
+        "collection_AcRVtm",
+        "collection_h9qNz7",
+        "collection_ENyLfp"
+      ],
+      "name": "Coverflow Collections",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1780745553a18c03f6": {
       "type": "_blocks",
       "blocks": {
@@ -506,16 +556,39 @@
     "section_RhpYRt": {
       "type": "section",
       "blocks": {
+        "video_NqWNaD": {
+          "type": "video",
+          "name": "t:names.video",
+          "settings": {
+            "source": "url",
+            "video_url": "",
+            "video_autoplay": false,
+            "video_loop": true,
+            "alt": "",
+            "custom_width": 67,
+            "custom_width_mobile": 100,
+            "aspect_ratio": "16/9",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "group_TEanyT": {
           "type": "group",
           "name": "Caption",
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
-            "horizontal_alignment": "center",
+            "horizontal_alignment": "space-between",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
             "width": "custom",
@@ -550,10 +623,10 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h1 class='oversized-brutalist'>SHAWRKS</h1>",
+                "text": "<h3>IDENTITY BEYOND THE NORM</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
-                "alignment": "center",
+                "alignment": "left",
                 "type_preset": "h4",
                 "font": "var(--font-primary--family)",
                 "font_size": "",
@@ -576,10 +649,10 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p class='minimal-subtitle'>THE NEW STANDARD</p>",
+                "text": "<p>SHAWRKS isn't just streetwear. It's a statement. Limited drops, uncompromised quality.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
-                "alignment": "center",
+                "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-primary--family)",
                 "font_size": "",
@@ -606,6 +679,7 @@
         }
       },
       "block_order": [
+        "video_NqWNaD",
         "group_TEanyT"
       ],
       "name": "t:names.video_section",
@@ -619,28 +693,28 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 6,
         "section_width": "full-width",
-        "section_height": "viewport",
-        "section_height_custom": 100,
+        "section_height": "",
+        "section_height_custom": 50,
         "color_scheme": "scheme-5",
-        "background_media": "video",
+        "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
         "border": "none",
         "border_width": 1,
         "border_opacity": 100,
         "border_radius": 0,
-        "toggle_overlay": true,
-        "overlay_color": "#00000080",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 0,
-        "padding-block-end": 0,
-        "video": "shopify://shop_images/motorcycle_cinematic.mp4"
+        "padding-block-end": 0
       }
     }
   },
   "order": [
     "hero_KwqKPd",
+    "coverflow_collections_4caCM6",
     "1780745553a18c03f6",
     "product_list_X8Q7bi",
     "section_RhpYRt"
