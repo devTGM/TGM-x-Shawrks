@@ -6,8 +6,7 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */
-{
+ */{
   "sections": {
     "hero_KwqKPd": {
       "type": "hero",
@@ -679,10 +678,41 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+,
+    "shoppable_videos_qaibvs3fn": {
+      "type": "shoppable-videos",
+      "settings": {
+        "title": "THE COLLECTION"
+      },
+      "blocks": {
+        "video_1": {
+          "type": "video_card"
+        },
+        "video_2": {
+          "type": "video_card"
+        },
+        "video_3": {
+          "type": "video_card"
+        },
+        "video_4": {
+          "type": "video_card"
+        },
+        "video_5": {
+          "type": "video_card"
+        }
+      },
+      "block_order": [
+        "video_1",
+        "video_2",
+        "video_3",
+        "video_4",
+        "video_5"
+      ]
     }
   },
   "order": [
     "hero_KwqKPd",
+    "shoppable_videos_qaibvs3fn",
     "coverflow_collections_4caCM6",
     "marquee_DVkXpJ",
     "product_list_W9grrq",

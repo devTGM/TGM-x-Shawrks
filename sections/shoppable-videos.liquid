@@ -1,0 +1,116 @@
+<div class="shoppable-video-section page-width">
+  {% if section.settings.title != blank %}
+    <h2 class="shoppable-video-title oversized-brutalist">{{ section.settings.title }}</h2>
+  {% endif %}
+  <div class="shoppable-video-grid">
+    {% for block in section.blocks %}
+      {% assign prod = block.settings.product %}
+      <div class="shoppable-video-card" {{ block.shopify_attributes }}>
+        <div class="video-container">
+          {% if block.settings.video != blank %}
+            {{ block.settings.video | video_tag: autoplay: false, loop: true, muted: true, controls: false, class: "shoppable-video-el" }}
+          {% else %}
+            <div class="video-placeholder placeholder-svg">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+          <button class="play-overlay-btn" aria-label="Play Video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        
+        <div class="product-info-overlay">
+          {% if prod != blank %}
+            <h3 class="prod-title">{{ prod.title }}</h3>
+            <p class="prod-price">{{ prod.price | money }}</p>
+            <a href="{{ prod.url }}" class="view-prod-btn btn button">VIEW PRODUCT</a>
+          {% else %}
+            <h3 class="prod-title">GHAMAND - CULT OF RUIN POLO</h3>
+            <p class="prod-price">RS. 1,799.00</p>
+            <a href="#" class="view-prod-btn btn button">VIEW PRODUCT</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.shoppable-video-card');
+  cards.forEach(card => {
+    const video = card.querySelector('video');
+    const playBtn = card.querySelector('.play-overlay-btn');
+    if(!video) return;
+    
+    playBtn.addEventListener('click', () => {
+      if(video.paused) {
+        video.play();
+        playBtn.style.opacity = '0';
+      } else {
+        video.pause();
+        playBtn.style.opacity = '1';
+      }
+    });
+
+    video.addEventListener('click', () => {
+      if(!video.paused) {
+        video.pause();
+        playBtn.style.opacity = '1';
+      }
+    });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Shoppable Videos",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "THE COLLECTION"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video_card",
+      "name": "Video Card",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shoppable Videos",
+      "blocks": [
+        {
+          "type": "video_card"
+        },
+        {
+          "type": "video_card"
+        },
+        {
+          "type": "video_card"
+        },
+        {
+          "type": "video_card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
