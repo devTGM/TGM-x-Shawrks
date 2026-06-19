@@ -1,0 +1,50 @@
+<style>
+.wishlist-page {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.wishlist-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+#wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+#wishlist-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 60px;
+}
+.wishlist-empty-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+}
+</style>
+
+<div class="wishlist-page page-width">
+  <h1>{{ page.title }}</h1>
+  <div id="wishlist-empty" style="display: none;">
+    <p>Your wishlist is currently empty.</p>
+    <a href="{{ routes.all_products_collection_url }}" class="wishlist-empty-button">Continue Shopping</a>
+  </div>
+  <div id="wishlist-grid"></div>
+</div>
+
+{% schema %}
+{
+  "name": "Wishlist Page",
+  "settings": []
+}
+{% endschema %}
