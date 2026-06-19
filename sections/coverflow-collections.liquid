@@ -1,0 +1,156 @@
+{{ 'coverflow-carousel.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'coverflow-carousel.js' | asset_url }}" defer="defer"></script>
+
+<div class="coverflow-section color-{{ section.settings.color_scheme }}" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    {% if section.settings.title != blank %}
+      <h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
+    {% endif %}
+    
+    <coverflow-carousel>
+      <div class="coverflow-carousel__container">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'collection' -%}
+              {%- assign collection = block.settings.collection -%}
+              <div class="coverflow-item" {{ block.shopify_attributes }}>
+                {%- if collection.image -%}
+                  {{ collection.image | image_url: width: 600 | image_tag: loading: 'lazy', alt: collection.title }}
+                {%- elsif collection.products.first and collection.products.first.featured_media -%}
+                  {{ collection.products.first.featured_media | image_url: width: 600 | image_tag: loading: 'lazy', alt: collection.title }}
+                {%- else -%}
+                  {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+                
+                <div class="coverflow-item__info">
+                  <h3>
+                    {%- if collection.title != blank -%}
+                      {{ collection.title | escape }}
+                    {%- else -%}
+                      {{ 'onboarding.collection_title' | t }}
+                    {%- endif -%}
+                  </h3>
+                </div>
+                
+                {%- if collection != blank -%}
+                  <a href="{{ collection.url }}" class="full-unstyled-link" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index: 10;">
+                    <span class="visually-hidden">{{ collection.title | escape }}</span>
+                  </a>
+                {%- endif -%}
+              </div>
+          {%- endcase -%}
+        {%- else -%}
+          {%- for i in (1..5) -%}
+            <div class="coverflow-item">
+              {{ 'collection-' | append: i | placeholder_svg_tag: 'placeholder-svg' }}
+              <div class="coverflow-item__info">
+                <h3>Collection {{ i }}</h3>
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
+    </coverflow-carousel>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Coverflow Collections",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Collections",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coverflow Collections",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

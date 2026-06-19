@@ -1,0 +1,86 @@
+.coverflow-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 4rem 0;
+  width: 100%;
+}
+
+coverflow-carousel {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 600px;
+  perspective: 1200px;
+  margin: 0 auto;
+  touch-action: pan-y;
+}
+
+.coverflow-carousel__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+.coverflow-item {
+  position: absolute;
+  width: 320px;
+  height: 480px;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.6s ease-out, filter 0.6s ease-out;
+  cursor: pointer;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  background-color: #111;
+  will-change: transform, opacity;
+}
+
+.coverflow-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coverflow-item__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 20px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.coverflow-item[data-status="active"] .coverflow-item__info {
+  opacity: 1;
+}
+
+.coverflow-item__info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  coverflow-carousel {
+    height: 400px;
+  }
+  .coverflow-item {
+    width: 220px;
+    height: 330px;
+  }
+}
