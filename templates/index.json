@@ -145,9 +145,8 @@
         },
         "collection_ENyLfp": {
           "type": "collection",
-          "disabled": true,
           "settings": {
-            "collection": ""
+            "collection": "jerseys"
           }
         }
       },
