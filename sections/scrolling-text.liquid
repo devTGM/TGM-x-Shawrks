@@ -129,7 +129,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.scrolling-text.name",
+  "name": "Scrolling-Text",
   "class": "scrolling-text-section",
   "settings": [
     {
@@ -138,15 +138,15 @@
       "options": [
         {
           "value": "left",
-          "label": "t:sections.scrolling-text.settings.direction.options__1.label"
+          "label": "Option 1"
         },
         {
           "value": "right",
-          "label": "t:sections.scrolling-text.settings.direction.options__2.label"
+          "label": "Option 2"
         }
       ],
       "default": "left",
-      "label": "t:sections.scrolling-text.settings.direction.label"
+      "label": "Direction"
     },
     {
       "type": "range",
@@ -154,7 +154,7 @@
       "min": 1,
       "max": 30,
       "step": 1,
-      "label": "t:sections.scrolling-text.settings.speed.label",
+      "label": "Speed",
       "unit": "x",
       "default": 20
     },
@@ -166,53 +166,53 @@
       "step": 5,
       "default": 70,
       "unit": "px",
-      "label": "t:sections.scrolling-text.settings.grid_horizontal.label"
+      "label": "Grid Horizontal"
     },
     {
       "type": "checkbox",
       "id": "enable_twin",
-      "label": "t:sections.scrolling-text.settings.enable_twin.label",
+      "label": "Enable Twin",
       "default": false
     },
     {
       "type": "checkbox",
       "id": "enable_parallax",
-      "label": "t:sections.global.settings.enable_parallax.label",
+      "label": "Enable Parallax",
       "default": true
     },
     {
       "type": "header",
-      "content": "t:sections.global.settings.header__colors.content",
-      "info": "t:sections.global.settings.header__colors.info"
+      "content": "Header  Colors",
+      "info": "Header  Colors"
     },
     {
       "type": "color",
       "id": "color_text",
-      "label": "t:sections.global.settings.color_text.label"
+      "label": "Color Text"
     },
     {
       "type": "color",
       "id": "color_background",
-      "label": "t:sections.global.settings.color_background.label"
+      "label": "Color Background"
     },
     {
       "type": "color_background",
       "id": "gradient_background",
-      "label": "t:sections.global.settings.gradient_background.label"
+      "label": "Gradient Background"
     },
     {
       "type": "color",
       "id": "color_highlight",
-      "label": "t:sections.global.settings.color_highlight.label"
+      "label": "Color Highlight"
     },
     {
       "type": "color_background",
       "id": "gradient_highlight",
-      "label": "t:sections.global.settings.gradient_highlight.label"
+      "label": "Gradient Highlight"
     },
     {
       "type": "header",
-      "content": "t:sections.global.settings.header__section.content"
+      "content": "Header  Section"
     },
     {
       "type": "range",
@@ -221,7 +221,7 @@
       "max": 120,
       "step": 4,
       "unit": "px",
-      "label": "t:sections.global.settings.padding_top.label",
+      "label": "Padding Top",
       "default": 36
     },
     {
@@ -231,32 +231,32 @@
       "max": 120,
       "step": 4,
       "unit": "px",
-      "label": "t:sections.global.settings.padding_bottom.label",
+      "label": "Padding Bottom",
       "default": 36
     },
     {
       "type": "checkbox",
       "id": "divider",
-      "label": "t:sections.global.settings.divider.label",
+      "label": "Divider",
       "default": false
     },
     {
       "type": "checkbox",
       "id": "rounded",
       "default": false,
-      "label": "t:sections.global.settings.rounded.label"
+      "label": "Rounded"
     }
   ],
   "blocks": [
     {
       "type": "text",
-      "name": "t:sections.global.blocks.text.name",
+      "name": "Text",
       "settings": [
         {
           "type": "inline_richtext",
           "id": "text",
           "default": "Welcome to our store",
-          "label": "t:sections.global.settings.text.label"
+          "label": "Text"
         },
         {
           "type": "range",
@@ -266,7 +266,7 @@
           "max": 180,
           "step": 2,
           "unit": "px",
-          "label": "t:sections.global.settings.text_size.label"
+          "label": "Text Size"
         },
         {
           "type": "select",
@@ -274,20 +274,20 @@
           "options": [
             {
               "value": "body",
-              "label": "t:sections.global.settings.text_font.options__1.label"
+              "label": "Option 1"
             },
             {
               "value": "heading",
-              "label": "t:sections.global.settings.text_font.options__2.label"
+              "label": "Option 2"
             }
           ],
           "default": "body",
-          "label": "t:sections.global.settings.text_font.label"
+          "label": "Text Font"
         },
         {
           "type": "header",
-          "content": "t:sections.global.settings.header__highlight.content",
-          "info": "t:sections.global.settings.header__highlight.info"
+          "content": "Header  Highlight",
+          "info": "Header  Highlight"
         },
         {
           "type": "select",
@@ -295,35 +295,35 @@
           "options": [
             {
               "value": "none",
-              "label": "t:sections.global.settings.highlighted_text.options__1.label"
+              "label": "Option 1"
             },
             {
               "value": "text",
-              "label": "t:sections.global.settings.highlighted_text.options__2.label"
+              "label": "Option 2"
             },
             {
               "value": "full_text",
-              "label": "t:sections.global.settings.highlighted_text.options__3.label"
+              "label": "Option 3"
             },
             {
               "value": "half_text",
-              "label": "t:sections.global.settings.highlighted_text.options__4.label"
+              "label": "Option 4"
             },
             {
               "value": "underline",
-              "label": "t:sections.global.settings.highlighted_text.options__5.label"
+              "label": "Option 5"
             },
             {
               "value": "stencil",
-              "label": "t:sections.global.settings.highlighted_text.options__6.label"
+              "label": "Option 6"
             },
             {
               "value": "scribble",
-              "label": "t:sections.global.settings.highlighted_text.options__7.label"
+              "label": "Option 7"
             }
           ],
           "default": "none",
-          "label": "t:sections.global.settings.highlighted_text.label"
+          "label": "Highlighted Text"
         },
         {
           "type": "select",
@@ -331,39 +331,39 @@
           "options": [
             {
               "value": "circle",
-              "label": "t:sections.global.settings.highlighted_scribble.options__1.label"
+              "label": "Option 1"
             },
             {
               "value": "basic-underline",
-              "label": "t:sections.global.settings.highlighted_scribble.options__2.label"
+              "label": "Option 2"
             },
             {
               "value": "sketch-underline",
-              "label": "t:sections.global.settings.highlighted_scribble.options__3.label"
+              "label": "Option 3"
             },
             {
               "value": "squiggle-underline",
-              "label": "t:sections.global.settings.highlighted_scribble.options__4.label"
+              "label": "Option 4"
             },
             {
               "value": "squiggle-underline-2",
-              "label": "t:sections.global.settings.highlighted_scribble.options__5.label"
+              "label": "Option 5"
             }
           ],
           "default": "circle",
-          "label": "t:sections.global.settings.highlighted_scribble.label",
-          "info": "t:sections.global.settings.highlighted_scribble.info"
+          "label": "Highlighted Scribble",
+          "info": "Highlighted Scribble"
         }
       ]
     },
     {
       "type": "image",
-      "name": "t:sections.global.blocks.image.name",
+      "name": "Image",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.global.settings.image.label"
+          "label": "Image"
         },
         {
           "type": "range",
@@ -373,14 +373,14 @@
           "step": 4,
           "default": 80,
           "unit": "px",
-          "label": "t:sections.scrolling-text.blocks.image.settings.image_height.label"
+          "label": "Image Height"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.scrolling-text.presets.name",
+      "name": "Presets",
       "blocks": [
         {
           "type": "text"
