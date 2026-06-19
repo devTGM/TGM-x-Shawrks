@@ -160,7 +160,7 @@
       ],
       "name": "Coverflow Collections",
       "settings": {
-        "title": "Collections",
+        "title": "",
         "heading_size": "h1",
         "color_scheme": "",
         "padding_top": 36,
