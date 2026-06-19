@@ -354,7 +354,7 @@
       "name": "Bluorng Collection",
       "settings": {
         "title": "Denims",
-        "collection": "shirts",
+        "collection": "denims",
         "limit": 8
       }
     },
@@ -363,7 +363,7 @@
       "name": "Bluorng Collection",
       "settings": {
         "title": "Tanks",
-        "collection": "shirts",
+        "collection": "tanks",
         "limit": 8
       }
     }
