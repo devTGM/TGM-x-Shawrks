@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "hero_KwqKPd": {
       "type": "hero",
@@ -678,45 +679,54 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
-,
-    "shoppable_videos_qaibvs3fn": {
+    },
+    "shoppable_videos_mKqqpY": {
       "type": "shoppable-videos",
-      "settings": {
-        "title": "THE COLLECTION"
-      },
       "blocks": {
-        "video_1": {
-          "type": "video_card"
+        "video_card_CVDJUC": {
+          "type": "video_card",
+          "settings": {
+            "product": ""
+          }
         },
-        "video_2": {
-          "type": "video_card"
+        "video_card_W9GV8t": {
+          "type": "video_card",
+          "settings": {
+            "product": ""
+          }
         },
-        "video_3": {
-          "type": "video_card"
+        "video_card_VRaxyR": {
+          "type": "video_card",
+          "settings": {
+            "product": ""
+          }
         },
-        "video_4": {
-          "type": "video_card"
-        },
-        "video_5": {
-          "type": "video_card"
+        "video_card_rDrXGx": {
+          "type": "video_card",
+          "settings": {
+            "product": ""
+          }
         }
       },
       "block_order": [
-        "video_1",
-        "video_2",
-        "video_3",
-        "video_4",
-        "video_5"
-      ]
+        "video_card_CVDJUC",
+        "video_card_W9GV8t",
+        "video_card_VRaxyR",
+        "video_card_rDrXGx"
+      ],
+      "name": "Shoppable Videos",
+      "settings": {
+        "title": "THE COLLECTION"
+      }
     }
   },
   "order": [
     "hero_KwqKPd",
-    "shoppable_videos_qaibvs3fn",
     "coverflow_collections_4caCM6",
     "marquee_DVkXpJ",
     "product_list_W9grrq",
     "section_RhpYRt",
-    "product_list_hkgaY9"
+    "product_list_hkgaY9",
+    "shoppable_videos_mKqqpY"
   ]
 }
