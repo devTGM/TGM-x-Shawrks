@@ -10,6 +10,17 @@
 
 <div class="section-background color-{{ section.settings.color_scheme }}" style="{% if section.settings.rotation != 0 %}overflow: hidden;{% endif %}"></div>
 <div style="{% if section.settings.rotation != 0 %}overflow: hidden; width: 100vw; position: relative; left: 50%; margin-left: -50vw;{% endif %}">
+
+{%- capture marquee_content -%}
+  <div class="marquee__wrapper" ref="wrapper">
+    <div class="marquee__content" ref="content">
+      <div class="marquee__repeated-items" ref="marqueeItems[]">
+        {% content_for 'blocks' %}
+      </div>
+    </div>
+  </div>
+{%- endcapture -%}
+
 <marquee-component
   class="section spacing-style gap-style color-{{ section.settings.color_scheme }}"
   style="
@@ -28,23 +39,40 @@
   data-speed-factor="25"
   data-movement-direction="{{ section.settings.movement_direction }}"
 >
-  <div
-    class="marquee__wrapper"
-    ref="wrapper"
-  >
-    <div
-      class="marquee__content"
-      ref="content"
-    >
-      <div
-        class="marquee__repeated-items"
-        ref="marqueeItems[]"
-      >
-        {% content_for 'blocks' %}
-      </div>
-    </div>
-  </div>
+  {{ marquee_content }}
 </marquee-component>
+
+{%- if section.settings.enable_twin -%}
+  {%- liquid
+    assign reversed = 'normal'
+    if section.settings.movement_direction == 'normal'
+      assign reversed = 'reverse'
+    endif
+  -%}
+  <marquee-component
+    class="section spacing-style gap-style color-{{ section.settings.color_scheme }} marquee-twin"
+    style="
+      {%- render 'spacing-style', settings: section.settings %};
+      {% render 'gap-style', value: gap_between_elements, name: 'marquee-gap' %}
+      --marquee-direction: {{ reversed }};
+      {% if section.settings.rotation != 0 %}
+        transform: rotate({{ section.settings.rotation }}deg);
+        width: 150vw;
+        position: relative;
+        left: 50%;
+        transform-origin: center;
+        margin-left: -75vw;
+        margin-top: -1rem;
+      {% endif %}
+      opacity: 0.5;
+    "
+    data-speed-factor="25"
+    data-movement-direction="{{ reversed }}"
+  >
+    {{ marquee_content }}
+  </marquee-component>
+{%- endif -%}
+
 </div>
 
 {% stylesheet %}
@@ -136,6 +164,12 @@
         }
       ],
       "default": "normal"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_twin",
+      "label": "Enable Twin Marquee",
+      "default": false
     },
     {
       "type": "color_scheme",
