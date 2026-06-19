@@ -259,8 +259,8 @@ body::before {
 /* Wishlist Toggle Button */
 .wishlist-toggle {
   position: absolute;
-  top: 0;
-  right: 16px;
+  top: 12px;
+  right: 12px;
   background: transparent;
   border: none;
   padding: 0;
@@ -272,20 +272,23 @@ body::before {
   cursor: pointer;
   z-index: 2;
   transition: transform 0.2s ease;
-  color: #fff;
+  color: #000;
 }
 .wishlist-toggle svg {
   width: 24px;
   height: 24px;
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 2px;
 }
 .wishlist-toggle:hover {
   transform: translateY(-2px);
 }
 .wishlist-toggle.is-active svg {
-  fill: #fff;
-  stroke: #fff;
+  fill: #000;
+  stroke: #000;
 }
 .wishlist-toggle--bluorng {
-  top: 0;
-  right: 24px;
+  top: 16px;
+  right: 16px;
 }
