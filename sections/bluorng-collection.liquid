@@ -1,0 +1,190 @@
+<style>
+.bluorng-collection-wrapper {
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 40px;
+  margin: 40px auto;
+}
+.bluorng-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.bluorng-title {
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+  color: #000;
+  margin: 0;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1 !important;
+}
+.bluorng-discover-btn {
+  background: #000;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 50px !important;
+  border: none !important;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: none !important;
+}
+.bluorng-discover-btn:hover {
+  background: #333;
+  color: #fff;
+  box-shadow: none !important;
+  transform: none !important;
+}
+.bluorng-grid {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 24px;
+  scroll-snap-type: x mandatory;
+}
+.bluorng-grid::-webkit-scrollbar {
+  height: 6px;
+}
+.bluorng-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+.bluorng-grid::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+.bluorng-card {
+  flex: 0 0 calc(25% - 18px);
+  min-width: 260px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  scroll-snap-align: start;
+}
+.bluorng-card-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px !important;
+  mix-blend-mode: darken;
+}
+.bluorng-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 24px;
+}
+.bluorng-card-text h4 {
+  font-size: 0.9rem !important;
+  margin: 0;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  color: #000;
+  letter-spacing: normal !important;
+  line-height: 1.2 !important;
+}
+.bluorng-card-text p {
+  font-size: 0.8rem;
+  margin: 4px 0 0;
+  color: #555;
+  font-weight: 400;
+}
+.bluorng-add-btn {
+  background: transparent !important;
+  border: none !important;
+  color: #000;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 0.8;
+  font-weight: 300 !important;
+  border-radius: 0 !important;
+  text-transform: none !important;
+}
+.bluorng-add-btn:hover {
+  transform: scale(1.1) !important;
+  box-shadow: none !important;
+}
+@media (max-width: 768px) {
+  .bluorng-collection-wrapper { padding: 20px; border-radius: 16px; margin: 20px auto; }
+  .bluorng-card { flex: 0 0 85%; }
+}
+</style>
+
+<div class="page-width">
+  <div class="bluorng-collection-wrapper">
+    <div class="bluorng-header">
+      <h2 class="bluorng-title">{{ section.settings.title }}</h2>
+      <a href="{{ section.settings.collection.url | default: '#' }}" class="bluorng-discover-btn button">Discover more</a>
+    </div>
+    <div class="bluorng-grid">
+      {% assign collection = section.settings.collection %}
+      {% if collection != blank and collection.products_count > 0 %}
+        {% for product in collection.products limit: section.settings.limit %}
+          <a href="{{ product.url }}" class="bluorng-card">
+            <img class="bluorng-card-image" src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title }}" loading="lazy">
+            <div class="bluorng-card-info">
+              <div class="bluorng-card-text">
+                <h4>{{ product.title }}</h4>
+                <p>{{ product.price | money }}</p>
+              </div>
+              <button class="bluorng-add-btn" aria-label="Add to cart">+</button>
+            </div>
+          </a>
+        {% endfor %}
+      {% else %}
+        {% for i in (1..4) %}
+          <a href="#" class="bluorng-card">
+            <div style="background:#e0e0e0; aspect-ratio:1; width:100%; border-radius:12px;"></div>
+            <div class="bluorng-card-info">
+              <div class="bluorng-card-text">
+                <h4>Sample Cap {{ i }}</h4>
+                <p>RS. 3,200</p>
+              </div>
+              <button class="bluorng-add-btn">+</button>
+            </div>
+          </a>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Bluorng Collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Bluorng Caps"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "limit",
+      "label": "Product Limit",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bluorng Collection"
+    }
+  ]
+}
+{% endschema %}
