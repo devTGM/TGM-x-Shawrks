@@ -122,29 +122,31 @@
         "collection_qJtPcj": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "t-shirts"
           }
         },
         "collection_8hxdyA": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "shirts"
           }
         },
         "collection_AcRVtm": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "denims"
           }
         },
         "collection_h9qNz7": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": ""
           }
         },
         "collection_ENyLfp": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": ""
           }
