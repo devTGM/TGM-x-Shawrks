@@ -8,13 +8,22 @@
 
 {% assign gap_between_elements = section.settings.gap_between_elements %}
 
-<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div class="section-background color-{{ section.settings.color_scheme }}" style="{% if section.settings.rotation != 0 %}overflow: hidden;{% endif %}"></div>
+<div style="{% if section.settings.rotation != 0 %}overflow: hidden; width: 100vw; position: relative; left: 50%; margin-left: -50vw;{% endif %}">
 <marquee-component
   class="section spacing-style gap-style color-{{ section.settings.color_scheme }}"
   style="
     {%- render 'spacing-style', settings: section.settings %};
     {% render 'gap-style', value: gap_between_elements, name: 'marquee-gap' %}
     --marquee-direction: {{ section.settings.movement_direction }};
+    {% if section.settings.rotation != 0 %}
+      transform: rotate({{ section.settings.rotation }}deg);
+      width: 150vw;
+      position: relative;
+      left: 50%;
+      transform-origin: center;
+      margin-left: -75vw;
+    {% endif %}
   "
   data-speed-factor="25"
   data-movement-direction="{{ section.settings.movement_direction }}"
@@ -36,6 +45,7 @@
     </div>
   </div>
 </marquee-component>
+</div>
 
 {% stylesheet %}
   marquee-component {
@@ -166,6 +176,16 @@
       "step": 1,
       "unit": "px",
       "default": 24
+    },
+    {
+      "type": "range",
+      "id": "rotation",
+      "label": "Rotation",
+      "min": -90,
+      "max": 90,
+      "step": 1,
+      "unit": "deg",
+      "default": 0
     }
   ],
   "presets": [
